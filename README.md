@@ -18,24 +18,24 @@ This script updates the DNS record on Cloudflare if the current public IP addres
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/your-username/cloudflare-ddns-script.git
-   cd cloudflare-ddns-script
+   git clone https://github.com/jonaylton/cloudflare-ddns.git
+   cd cloudflare-ddns
    ```
 
 2. **Edit the script:**
    Open `cloudflare-ddns.sh` and replace the following placeholders with your actual Cloudflare API key, Zone ID, and DNS record name:
    ```bash
-   CF_API_KEY="your-cloudflare-api-key"
-   ZONE_ID="your-cloudflare-zone-id"
-   RECORD_NAME="your-dns-record-name"
+   CF_API_KEY="YOUR_API_KEY"
+   ZONE_ID="YOUR_ZONE_ID"
+   RECORD_NAME="A_DNS_RECORD"
    ```
 
 3. **Set up environment variables (optional but recommended):**
    Create a file named `.env` in the same directory as the script and add your Cloudflare credentials:
    ```env
-   CF_API_KEY=your-cloudflare-api-key
-   ZONE_ID=your-cloudflare-zone-id
-   RECORD_NAME=your-dns-record-name
+   CF_API_KEY=YOUR_API_KEY
+   ZONE_ID=YOUR_API_KEY
+   RECORD_NAME=YOUR_API_KEY
    ```
 
    Modify the script to load the environment variables:
@@ -74,7 +74,7 @@ This script updates the DNS record on Cloudflare if the current public IP addres
 
 You can install these dependencies using your package manager. For example, on Debian-based systems:
 ```bash
-sudo apt-get install curl jq
+apt install curl jq
 ```
 
 ## License
