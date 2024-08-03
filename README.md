@@ -46,6 +46,13 @@ This script updates the DNS record on Cloudflare if the current public IP addres
    set +a
    ```
 
+   Remove the following lines that are no more needed
+   ```bash
+   CF_API_KEY="YOUR_API_KEY"
+   ZONE_ID="YOUR_ZONE_ID"
+   RECORD_NAME="A_DNS_RECORD"
+   ```
+
 4. **Make the script executable:**
    ```bash
    chmod +x cloudflare-ddns.sh
