@@ -22,7 +22,7 @@ This script updates the DNS record on Cloudflare if the current public IP addres
    cd cloudflare-ddns
    ```
 
-2. **Edit the script:**
+2. **(Simplest way) Edit the script:**
    Open `cloudflare-ddns.sh` and replace the following placeholders with your actual Cloudflare API key, Zone ID, and DNS record name:
    ```bash
    CF_API_KEY="YOUR_API_KEY"
@@ -30,7 +30,7 @@ This script updates the DNS record on Cloudflare if the current public IP addres
    RECORD_NAME="A_DNS_RECORD"
    ```
 
-3. **Set up environment variables (optional but recommended):**
+3. **(Optional but recommended) Set up environment variables:**
    Create a file named `.env` in the same directory as the script and add your Cloudflare credentials:
    ```env
    CF_API_KEY=YOUR_API_KEY
@@ -38,7 +38,7 @@ This script updates the DNS record on Cloudflare if the current public IP addres
    RECORD_NAME=YOUR_API_KEY
    ```
 
-   Modify the script to load the environment variables:
+   Modify the script to load the environment variables (add the following lines at the top):
    ```bash
    #!/bin/bash
    set -a
@@ -46,7 +46,7 @@ This script updates the DNS record on Cloudflare if the current public IP addres
    set +a
    ```
 
-   Remove the following lines that are no more needed
+   Remove the following lines that are no more needed:
    ```bash
    CF_API_KEY="YOUR_API_KEY"
    ZONE_ID="YOUR_ZONE_ID"
